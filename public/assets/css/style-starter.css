@@ -15679,7 +15679,7 @@ h3.title-main:after {
   overflow: hidden;
   min-height: 400px;
   min-height: 100vh;
-  background-color: var(--primary-color);
+  background-color: #212529;
 }
 
 .slideshow__slide {
@@ -18637,7 +18637,7 @@ a.footer-logo {
 
 /* inner-banner */
 .inner-banner {
-  background: url(../images/inner-banner.jpg) no-repeat bottom;
+  background: url(../img/bb.png) no-repeat bottom;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
