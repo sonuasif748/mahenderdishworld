@@ -17,6 +17,30 @@ Author URL: https://asifportfolio123.web.app/
     <!-- //google-fonts -->
     <!-- Template CSS Style link -->
     <link rel="stylesheet" href="assets/css/style-starter.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('0nVemI-ceJQO_Ogmk');
+        })();
+    </script>
+    <!-- <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script> -->
+
 </head>
 
 <body>
@@ -56,7 +80,7 @@ Author URL: https://asifportfolio123.web.app/
                     </ul>
                 </div>
                 <!-- toggle switch for light and dark theme -->
-                
+
                 <!-- //toggle switch for light and dark theme -->
             </nav>
         </div>
@@ -85,39 +109,40 @@ Author URL: https://asifportfolio123.web.app/
                 <p class="sub-title mt-2"></p>
             </div>
             <div class="contact-w3pvt-form mt-5 pt-lg-4">
-                <form method="post" class="w3layouts-contact-fm" action="https://sendmail.w3layouts.com/submitForm">
+                <form class="w3layouts-contact-fm" id="contact-form">
                     <div class="row main-cont-sec">
                         <div class="col-md-6 left-cont-contact">
                             <div class="form-group mb-3">
-                                <label for="w3lName">First Name</label>
-                                <input class="form-control" type="text" name="w3lName" id="w3lName" placeholder=""
+                                <label for="w3lName">Name</label>
+                                <input class="form-control" type="text" name="name" id="jsname" placeholder=""
                                     required="">
                             </div>
-                            <div class="form-group mb-3">
+                            <!-- <div class="form-group mb-3">
                                 <label for="w3lName">Last Name</label>
                                 <input class="form-control" type="text" name="w3lName" id="w3lName" placeholder=""
                                     required="">
-                            </div>
+                            </div> -->
                             <div class="form-group mb-3">
                                 <label for="w3lSender">Email</label>
-                                <input class="form-control" type="email" name="w3lSender" id="w3lSender" placeholder=""
+                                <input class="form-control" type="email" name="email" id="jsemail" placeholder=""
                                     required="">
                             </div>
                         </div>
                         <div class="col-md-6 right-cont-contact">
                             <div class="form-group">
                                 <label for="w3lSubject">Write Message</label>
-                                <textarea class="form-control" name="w3lMessage" id="w3lMessage" placeholder=""
+                                <textarea class="form-control" name="message" id="jsmessage" placeholder=""
                                     required=""></textarea>
                             </div>
                         </div>
                     </div>
                     <div class="form-group-2 mt-3 text-right">
-                        <button type="submit" class="btn btn-style">Send Now</button>
+                        <button class="btn btn-style" value="submit">Send Now</button>
                     </div>
                 </form>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d948.8329590631037!2d79.48398682914926!3d17.96329199923353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8647c9ebe75d80a3!2zMTfCsDU3JzQ3LjkiTiA3OcKwMjknMDQuMyJF!5e0!3m2!1sen!2sin!4v1672223106066!5m2!1sen!2sin" 
-		allowfullscreen=""></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15181.323479239714!2d79.46814850781256!3d17.963336999999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a334e10812aac27%3A0x6879f92a0f84493b!2sMahendra%20Xerox%20And%20DTH%20World!5e0!3m2!1sen!2sin!4v1672548497106!5m2!1sen!2sin"
+                    allowfullscreen=""></iframe>
             </div>
         </div>
     </section>
@@ -126,105 +151,113 @@ Author URL: https://asifportfolio123.web.app/
     <!-- footer -->
     <footer class="w3l-footer-29-main">
         <div class="footer-29-w3l py-5">
-          <div class="container py-lg-4">
-            <div class="row footer-top-29">
-              <div class="col-lg-4 col-md-6 col-sm-7 footer-list-29 footer-1 pr-lg-5">
-                <div class="footer-logo mb-3">
-                  <a class="footer-brand-logo" href="index.html">Mahender<br/><span class="sublog">Dish World</span></a>
-    
-                </div>
-                <p>Main Road, Madikonda <br/> Beside Ayodhyapuram Road <br/> Kazipet(M), Hanamkonda(D), 506142 <br/> Mobile : 9912744860, 8801787540</p>
-                <!-- <div class="main-social-footer-29 mt-4">
+            <div class="container py-lg-4">
+                <div class="row footer-top-29">
+                    <div class="col-lg-4 col-md-6 col-sm-7 footer-list-29 footer-1 pr-lg-5">
+                        <div class="footer-logo mb-3">
+                            <a class="footer-brand-logo" href="index.html">Mahender<br /><span class="sublog">Dish
+                                    World</span></a>
+
+                        </div>
+                        <p>Main Road, Madikonda <br /> Beside Ayodhyapuram Road <br /> Kazipet(M), Hanamkonda(D), 506142
+                            <br /> Mobile : 9912744860, 8801787540</p>
+                        <!-- <div class="main-social-footer-29 mt-4">
                   <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
                   <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>
                   <a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>
                   <a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a>
                 </div> -->
-              </div>
-              <div class="col-lg-2 col-md-6 col-sm-5 col-6 footer-list-29 footer-2 mt-sm-0 mt-5">
-    
-                <ul>
-                  <h6 class="footer-title-29">More Info</h6>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="services.html">Services</a></li>
-                  <li><a href="contact.html">Contact us</a></li>
-                </ul>
-              </div>
-              <div class="col-lg-2 col-md-6 col-sm-5 col-6 footer-list-29 footer-3 mt-lg-0 mt-5">
-                <h6 class="footer-title-29">Usefull Links</h6>
-                <ul>
-                  <li><a href="https://www.tataplay.com/" target="_blank">Tata Play</a></li>
-                  <li><a href="https://www.airtel.in/" target="_blank">Airtel DTH</a></li>
-                  <li><a href="https://www.sundirect.in/" target="_blank">
-                      Sundirect</a></li>
-                  <li><a href="https://www.d2h.com/" target="_blank">D2H</a></li>   
-                </ul>
-    
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-7 footer-list-29 footer-4 mt-lg-0 mt-5">
-                <h6 class="footer-title-29">Gallery
-                </h6>
-    
-                <ul class="w3linst-imgs row">
-                  <li class="col-4"><a href="#"><img src="assets/img/l1.jpg" alt="" class="radius-image img-fluid"></a>
-                  </li>
-                  <li class="col-4"><a href="#"><img src="assets/img/l2.jpg" alt="" class="radius-image img-fluid"></a>
-                  </li>
-                  <li class="col-4"><a href="#"><img src="assets/img/l3.jpg" alt="" class="radius-image img-fluid"></a>
-                  </li>
-                  <li class="col-4"><a href="#"><img src="assets/img/l4.jpg" alt="" class="radius-image img-fluid"></a>
-                  </li>
-                  <li class="col-4"><a href="#"><img src="assets/img/l5.jpg" alt="" class="radius-image img-fluid"></a>
-                  </li>
-                  <li class="col-4"><a href="#"><img src="assets/img/l6.jpg" alt="" class="radius-image img-fluid"></a>
-                  </li>
-    
-                </ul>
-    
-              </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-5 col-6 footer-list-29 footer-2 mt-sm-0 mt-5">
+
+                        <ul>
+                            <h6 class="footer-title-29">More Info</h6>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="contact.html">Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-5 col-6 footer-list-29 footer-3 mt-lg-0 mt-5">
+                        <h6 class="footer-title-29">Usefull Links</h6>
+                        <ul>
+                            <li><a href="https://www.tataplay.com/" target="_blank">Tata Play</a></li>
+                            <li><a href="https://www.airtel.in/" target="_blank">Airtel DTH</a></li>
+                            <li><a href="https://www.sundirect.in/" target="_blank">
+                                    Sundirect</a></li>
+                            <li><a href="https://www.d2h.com/" target="_blank">D2H</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-7 footer-list-29 footer-4 mt-lg-0 mt-5">
+                        <h6 class="footer-title-29">Gallery
+                        </h6>
+
+                        <ul class="w3linst-imgs row">
+                            <li class="col-4"><a href="#"><img src="assets/img/l1.jpg" alt=""
+                                        class="radius-image img-fluid"></a>
+                            </li>
+                            <li class="col-4"><a href="#"><img src="assets/img/l2.jpg" alt=""
+                                        class="radius-image img-fluid"></a>
+                            </li>
+                            <li class="col-4"><a href="#"><img src="assets/img/l3.jpg" alt=""
+                                        class="radius-image img-fluid"></a>
+                            </li>
+                            <li class="col-4"><a href="#"><img src="assets/img/l4.jpg" alt=""
+                                        class="radius-image img-fluid"></a>
+                            </li>
+                            <li class="col-4"><a href="#"><img src="assets/img/l5.jpg" alt=""
+                                        class="radius-image img-fluid"></a>
+                            </li>
+                            <li class="col-4"><a href="#"><img src="assets/img/l6.jpg" alt=""
+                                        class="radius-image img-fluid"></a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
         <!-- //footer -->
-    
+
         <!-- copyright -->
         <section class="w3l-copyright">
-          <div class="container">
-            <div class="row bottom-copies">
-              <p class="col-lg-8 copy-footer-29">© 2023 Mahender Dish World. All rights reserved. Design by <a
-                  href="https://asifportfolio123.web.app/" target="_blank">
-                  Asif</a></p>
-    
+            <div class="container">
+                <div class="row bottom-copies">
+                    <p class="col-lg-8 copy-footer-29">© 2023 Mahender Dish World. All rights reserved. Design by <a
+                            href="https://asifportfolio123.web.app/" target="_blank">
+                            Asif</a></p>
+
+                </div>
             </div>
-          </div>
         </section>
         <!-- move top -->
         <button onclick="topFunction()" id="movetop" title="Go to top">
-          &#10548;
+            &#10548;
         </button>
         <script>
-          // When the user scrolls down 20px from the top of the document, show the button
-          window.onscroll = function () {
-            scrollFunction()
-          };
-    
-          function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-              document.getElementById("movetop").style.display = "block";
-            } else {
-              document.getElementById("movetop").style.display = "none";
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("movetop").style.display = "block";
+                } else {
+                    document.getElementById("movetop").style.display = "none";
+                }
             }
-          }
-    
-          // When the user clicks on the button, scroll to the top of the document
-          function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-          }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
         </script>
         <!-- /move top -->
-      </footer>
+    </footer>
     <!-- //footer -->
 
     <!-- Js scripts -->
@@ -232,25 +265,26 @@ Author URL: https://asifportfolio123.web.app/
     <button onclick="topFunction()" id="movetop" title="Go to top">
         <span class="fa fa-level-up" aria-hidden="true"></span>
     </button>
+
     <script>
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-            scrollFunction()
-        };
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+                scrollFunction()
+            };
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("movetop").style.display = "block";
-            } else {
-                document.getElementById("movetop").style.display = "none";
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("movetop").style.display = "block";
+                } else {
+                    document.getElementById("movetop").style.display = "none";
+                }
             }
-        }
 
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
     </script>
     <!-- //move top -->
 
@@ -261,78 +295,78 @@ Author URL: https://asifportfolio123.web.app/
     <!-- theme switch js (light and dark)-->
     <script src="assets/js/theme-change.js"></script>
     <script>
-        function autoType(elementClass, typingSpeed) {
-            var thhis = $(elementClass);
-            thhis.css({
-                "position": "relative",
-                "display": "inline-block"
-            });
-            thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
-            thhis = thhis.find(".text-js");
-            var text = thhis.text().trim().split('');
-            var amntOfChars = text.length;
-            var newString = "";
-            thhis.text("|");
-            setTimeout(function () {
-                thhis.css("opacity", 1);
-                thhis.prev().removeAttr("style");
-                thhis.text("");
-                for (var i = 0; i < amntOfChars; i++) {
-                    (function (i, char) {
-                        setTimeout(function () {
-                            newString += char;
-                            thhis.text(newString);
-                        }, i * typingSpeed);
-                    })(i + 1, text[i]);
-                }
-            }, 1500);
-        }
+            function autoType(elementClass, typingSpeed) {
+                var thhis = $(elementClass);
+                thhis.css({
+                    "position": "relative",
+                    "display": "inline-block"
+                });
+                thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+                thhis = thhis.find(".text-js");
+                var text = thhis.text().trim().split('');
+                var amntOfChars = text.length;
+                var newString = "";
+                thhis.text("|");
+                setTimeout(function () {
+                    thhis.css("opacity", 1);
+                    thhis.prev().removeAttr("style");
+                    thhis.text("");
+                    for (var i = 0; i < amntOfChars; i++) {
+                        (function (i, char) {
+                            setTimeout(function () {
+                                newString += char;
+                                thhis.text(newString);
+                            }, i * typingSpeed);
+                        })(i + 1, text[i]);
+                    }
+                }, 1500);
+            }
 
-        $(document).ready(function () {
-            // Now to start autoTyping just call the autoType function with the 
-            // class of outer div
-            // The second paramter is the speed between each letter is typed.   
-            autoType(".type-js", 200);
-        });
+            $(document).ready(function () {
+                // Now to start autoTyping just call the autoType function with the 
+                // class of outer div
+                // The second paramter is the speed between each letter is typed.   
+                autoType(".type-js", 200);
+            });
     </script>
     <!-- //theme switch js (light and dark)-->
 
     <!-- MENU-JS -->
     <script>
-        $(window).on("scroll", function () {
-            var scroll = $(window).scrollTop();
+            $(window).on("scroll", function () {
+                var scroll = $(window).scrollTop();
 
-            if (scroll >= 80) {
-                $("#site-header").addClass("nav-fixed");
-            } else {
-                $("#site-header").removeClass("nav-fixed");
-            }
-        });
+                if (scroll >= 80) {
+                    $("#site-header").addClass("nav-fixed");
+                } else {
+                    $("#site-header").removeClass("nav-fixed");
+                }
+            });
 
-        //Main navigation Active Class Add Remove
-        $(".navbar-toggler").on("click", function () {
-            $("header").toggleClass("active");
-        });
-        $(document).on("ready", function () {
-            if ($(window).width() > 991) {
-                $("header").removeClass("active");
-            }
-            $(window).on("resize", function () {
+            //Main navigation Active Class Add Remove
+            $(".navbar-toggler").on("click", function () {
+                $("header").toggleClass("active");
+            });
+            $(document).on("ready", function () {
                 if ($(window).width() > 991) {
                     $("header").removeClass("active");
                 }
+                $(window).on("resize", function () {
+                    if ($(window).width() > 991) {
+                        $("header").removeClass("active");
+                    }
+                });
             });
-        });
     </script>
     <!-- //MENU-JS -->
 
     <!-- disable body scroll which navbar is in active -->
     <script>
-        $(function () {
-            $('.navbar-toggler').click(function () {
-                $('body').toggleClass('noscroll');
-            })
-        });
+            $(function () {
+                $('.navbar-toggler').click(function () {
+                    $('body').toggleClass('noscroll');
+                })
+            });
     </script>
     <!-- //disable body scroll which navbar is in active -->
 
@@ -340,6 +374,38 @@ Author URL: https://asifportfolio123.web.app/
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- //bootstrap-->
     <!-- //Js scripts -->
+
+    <!-- <script>
+        function SendMail() {
+            console.log('hello1')
+            var templateParams = {
+                name: document.getElementById("jsname").value,
+                email: document.getElementById("jsemail").value,
+                message: document.getElementById("jsmessage").value,
+            };
+
+            console.log(templateParams)
+
+            emailjs.send("service_c12k704", "template_y76p4hh", templateParams)
+        }
+            
+    </script> -->
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                var templateParams = {
+                    name: document.getElementById("jsname").value,
+                    email: document.getElementById("jsemail").value,
+                    message: document.getElementById("jsmessage").value,
+                };
+                // these IDs from the previous steps
+                emailjs.send('service_c12k704', 'template_y76p4hh', templateParams)
+                    
+            });
+        }
+    </script>
 </body>
 
 </html>
